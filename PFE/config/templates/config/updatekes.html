@@ -1,0 +1,47 @@
+{% block content %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gére Prestataires | Modifier Prestataire</title>
+
+
+<style>
+    body{
+        height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: purple url( "/images/bgcarte.svg") center/cover;
+    }
+    .container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+    
+</style>
+</head>
+<body>
+<div class="row">
+<div class="col-sm-8 offset-2">
+<h4 class="alert alert-info">Modifier Informations Prestataire</h4>
+<div class="container">
+<form action="" method="POST">
+{% csrf_token %}
+ {{form.as_p}}
+<div class="btn">
+    <input type="submit" class="btn btn-success" value="Modifier">
+    <a href="{%url 'tablekes'%}" class="btn btn-info"  >Retour</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+{% endblock content %}

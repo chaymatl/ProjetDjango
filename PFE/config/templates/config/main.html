@@ -1,0 +1,48 @@
+{% block content %}  
+
+<h1>Main</h1>
+
+<div class="container">
+
+<div class="row">
+    <div class="col-5m">
+        total gère : {{t_gère}}  
+    </div>
+
+    <div class="col-5m">
+        created gère  : {{c_gère}}
+    </div>
+        
+    <div class="col-5m">
+        updated gère : {{u_gère}}
+    </div>
+
+    <div class="col-5m">
+        desactivated gère : {{d_gère}}
+    </div>
+    
+</div>
+    
+<div class="container">
+    
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">administrateur</th>
+            <th scope="col">status</th>
+            <th scope="col">utilisateur</th>  
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in gère %}
+        <tr>
+            <td>{{item.administrateur}}</td>
+            <td>{{item.status}}</td>
+            <td>{{item.utilisateur}}</td>
+        {% endfor %}  
+        </tr>
+    </tbody>
+    
+</div>
+    
+{% endblock %}   
